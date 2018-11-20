@@ -16,12 +16,15 @@ body {
 }
 
 header {
-    height: 25vh;
+    position: fixed;
+    height: 24vh;
+    width: 100%;
+    background-color: #fff;
 }
 
 .header-logo {
     position: fixed;
-    top: 5vh;
+    top: 2vh;
     left: 2vh;
     height: 20vh;
 }
@@ -32,8 +35,8 @@ header {
 
 .header-menu-btn {
     position: fixed;
-    top: 13vh;
-    left: 35vh;
+    top: 10vh;
+    right: 5vw;
 }
 
 .header-menu-btn p {
@@ -70,24 +73,102 @@ aside {
 }
 
 aside nav ul li {
-    margin-top: 5vh;
+    margin-top: 7vh;
     text-align: center;
 }
 
 aside nav ul li:first-child {
-    margin-top: 12vh;
+    margin-top: 13vh;
 }
 
 
 aside nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     padding: 10px 10px;
     border-bottom: 2px solid transparent;
+    transition: .5s;
 }
 
 aside nav ul li a:hover {
     color: red;
     border-bottom: 2px solid red;
+}
+
+section.header_bgi {
+    position: relative;
+    top: 24vh;
+    height: 76vh;
+    width: 100%;
+    background-image: url(../img/bg1.jpeg);
+    background-size: cover;
+    background-position: 43% 0;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.header_bgi_cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.header_bgi .header_motto {
+    position: relative;
+    width: 75%;
+    height: 0;
+    /* background-color: green; */
+    top: 55vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 5px;
+    text-align: center;
+    border-top: 5px solid red;
+}
+
+.header_bgi .header_motto h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    color: white;
+    font-size: 31px;
+    opacity: 0;
+    animation: motto 21s infinite linear;
+}
+
+@keyframes motto {
+    0% {
+        opacity: 0;
+
+    }
+
+    10% {
+        opacity: 1;
+
+    }
+
+    33.33% {
+        opacity: 1;
+
+    }
+
+    38% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.header_motto h1:nth-child(2) {
+    animation-delay: 7s;
+}
+
+.header_motto h1:nth-child(3) {
+    animation-delay: 14s;
+
 }
