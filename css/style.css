@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+
+header {
+    height: 25vh;
+}
+
+.header-logo {
+    position: fixed;
+    top: 5vh;
+    left: 2vh;
+    height: 20vh;
+}
+
+.header-logo img {
+    height: 20vh;
+}
+
+.header-menu-btn {
+    position: fixed;
+    top: 13vh;
+    left: 35vh;
+}
+
+.header-menu-btn p {
+    float: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.header-menu-btn .burger {
+    cursor: pointer;
+    display: inline;
+    font-size: 20px;
+}
+
+.burger.active {
+    color: red;
+    z-index: 1;
+}
+
+.burger.active+aside {
+    left: 0;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -60%;
+    width: 60%;
+    background-color: black;
+    transition: .3s;
+}
+
+aside nav ul li {
+    margin-top: 5vh;
+    text-align: center;
+}
+
+aside nav ul li:first-child {
+    margin-top: 12vh;
+}
+
+
+aside nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    padding: 10px 10px;
+    border-bottom: 2px solid transparent;
+}
+
+aside nav ul li a:hover {
+    color: red;
+    border-bottom: 2px solid red;
+}
