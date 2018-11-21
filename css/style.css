@@ -25,8 +25,7 @@ header {
 .header-logo {
     position: fixed;
     top: 2vh;
-    left: 2vh;
-    height: 20vh;
+    left: 3vw;
 }
 
 .header-logo img {
@@ -36,7 +35,7 @@ header {
 .header-menu-btn {
     position: fixed;
     top: 10vh;
-    right: 5vw;
+    right: 7vw;
 }
 
 .header-menu-btn p {
@@ -78,7 +77,7 @@ aside nav ul li {
 }
 
 aside nav ul li:first-child {
-    margin-top: 13vh;
+    margin-top: 10vh;
 }
 
 
@@ -94,6 +93,10 @@ aside nav ul li a {
 aside nav ul li a:hover {
     color: red;
     border-bottom: 2px solid red;
+}
+
+.nav_desctop {
+    display: none;
 }
 
 section.header_bgi {
@@ -119,13 +122,12 @@ section.header_bgi {
     position: relative;
     width: 75%;
     height: 0;
-    /* background-color: green; */
     top: 55vh;
     left: 50%;
     transform: translateX(-50%);
     padding-top: 5px;
     text-align: center;
-    border-top: 5px solid red;
+    border-top: 3px solid red;
 }
 
 .header_bgi .header_motto h1 {
@@ -137,6 +139,15 @@ section.header_bgi {
     font-size: 31px;
     opacity: 0;
     animation: motto 21s infinite linear;
+}
+
+.header_motto h1:nth-child(2) {
+    animation-delay: 7s;
+}
+
+.header_motto h1:nth-child(3) {
+    animation-delay: 14s;
+
 }
 
 @keyframes motto {
@@ -164,11 +175,218 @@ section.header_bgi {
     }
 }
 
-.header_motto h1:nth-child(2) {
-    animation-delay: 7s;
+@media (min-width:560px) {
+    header {
+        height: 29vh;
+    }
+
+    .header-logo {
+        left: 15vw;
+    }
+
+    .header-logo img {
+        height: 25vh;
+    }
+
+    .header-menu-btn {
+        right: 15vw;
+        top: 11vh;
+    }
+
+    .header-menu-btn p {
+        letter-spacing: 4px;
+        margin-right: 15px;
+        font-size: 18px;
+    }
+
+    .header-menu-btn .burger {
+        font-size: 18px;
+    }
+
+    section.header_bgi {
+        top: 29vh;
+        height: 71vh;
+        background-position: 43% 60%;
+    }
+
+    .header_bgi .header_motto {
+        width: 50%;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .header_bgi .header_motto h1 {
+        width: 85%;
+        font-size: 25px;
+    }
+
+    .header_motto h1:nth-child(2) {
+        animation-delay: 7s;
+    }
+
+    .header_motto h1:nth-child(3) {
+        animation-delay: 14s;
+    }
 }
 
-.header_motto h1:nth-child(3) {
-    animation-delay: 14s;
+@media (min-width: 560px) and (orientation: landscape) {
+    aside nav ul li {
+        margin-top: 10vh;
+    }
 
+    aside nav ul li:first-child {
+        margin-top: 13vh;
+    }
+}
+
+@media (min-width: 760px) and (orientation: portrait) {
+    header {
+        height: 23vh;
+    }
+
+    .header-logo {
+        top: 2vh;
+        left: 5vh;
+    }
+
+    .header-logo img {
+        height: 20vh;
+    }
+
+    .header-menu-btn {
+        top: 10vh;
+        right: 15vw;
+    }
+
+    .header-menu-btn p {
+        font-size: 30px;
+    }
+
+    .header-menu-btn .burger {
+        font-size: 30px;
+    }
+
+    section.header_bgi {
+        top: 23vh;
+        height: 77vh;
+    }
+
+    aside nav ul li a {
+        font-size: 35px;
+    }
+
+    .header_bgi .header_motto {
+        width: 60%;
+        top: 70%;
+        transform: translate(-50%, -50%);
+        border-top: 5px solid red;
+    }
+
+    .header_bgi .header_motto h1 {
+        width: 85%;
+        font-size: 38px;
+    }
+
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+    .header-logo {
+        left: 15vh;
+    }
+
+    .header-menu-btn {
+        top: 12vh;
+    }
+
+    .header-menu-btn p {
+        font-size: 25px;
+    }
+
+    .header-menu-btn .burger {
+        font-size: 25px;
+    }
+
+    aside nav ul li a {
+        font-size: 30px;
+    }
+
+    .header_bgi .header_motto {
+        width: 50%;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .header_bgi .header_motto h1 {
+        width: 85%;
+        font-size: 33px;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    .header-logo {
+        left: 5vh;
+    }
+
+    .header-menu-btn {
+        top: 10vh;
+    }
+
+    .header-menu-btn p {
+        font-size: 35px;
+    }
+
+    .header-menu-btn .burger {
+        font-size: 35px;
+    }
+
+    aside nav ul li a {
+        font-size: 40px;
+    }
+
+    .header_bgi .header_motto {
+        width: 55%;
+        top: 70%;
+    }
+
+    .header_bgi .header_motto h1 {
+        width: 95%;
+        font-size: 55px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .header-menu-btn {
+        display: none;
+    }
+
+    .header-logo {
+        left: 10vw;
+    }
+
+    .nav_desctop {
+        position: fixed;
+        top: 13vh;
+        left: 55vw;
+        display: inline-block;
+    }
+
+    .nav_desctop ul li {
+        display: inline;
+        margin-left: 2.5vw;
+    }
+
+    .nav_desctop ul li a {
+        text-decoration: none;
+        color: black;
+        padding: 10px 10px;
+        border-bottom: 2px solid transparent;
+        font-size: 27px;
+    }
+
+    .nav_desctop ul li a:hover {
+        color: red;
+        border-bottom: 2px solid red;
+    }
 }
