@@ -54,7 +54,6 @@ header {
 
 .burger.active {
     color: red;
-    z-index: 1;
 }
 
 .burger.active+aside {
@@ -357,6 +356,14 @@ section.header_bgi {
 }
 
 @media (min-width: 1280px) {
+    header {
+        height: 22vh;
+    }
+
+    .header-logo img {
+        height: 18vh;
+    }
+
     .header-menu-btn {
         display: none;
     }
@@ -367,8 +374,8 @@ section.header_bgi {
 
     .nav_desctop {
         position: fixed;
-        top: 13vh;
-        left: 55vw;
+        top: 10vh;
+        left: 45vw;
         display: inline-block;
     }
 
@@ -383,10 +390,111 @@ section.header_bgi {
         padding: 10px 10px;
         border-bottom: 2px solid transparent;
         font-size: 27px;
+        transition: .3s;
     }
 
     .nav_desctop ul li a:hover {
         color: red;
         border-bottom: 2px solid red;
     }
+
+    section.header_bgi {
+        top: 24vh;
+        height: 78vh;
+        background-position: 0 40%;
+        position: fixed;
+        z-index: 0;
+    }
+
+    .header_bgi .header_motto {
+        width: 30%;
+        top: 60vh;
+        left: 73%;
+    }
+
+    .header_bgi .header_motto h1 {
+        font-size: 35px;
+    }
+
+    .header_motto h1:nth-child(2) {
+        animation-delay: 7s;
+    }
+
+    .header_motto h1:nth-child(3) {
+        animation-delay: 14s;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    .header-logo {
+        left: 13vw;
+    }
+
+    .nav_desctop {
+        top: 10vh;
+        left: 53vw;
+    }
+
+    .header_bgi .header_motto {
+        width: 30%;
+        left: 75%;
+    }
+}
+
+.section_break {
+    position: relative;
+    top: 25vh;
+    height: 50vh;
+    z-index: -1;
+}
+
+.section_break_cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -1;
+}
+
+.section_break_contact {
+    position: relative;
+    background-image: url(../img/office1.jpg);
+    background-size: cover;
+    background-position: 215 0;
+}
+
+.section_breake_contact_text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 15px;
+    text-align: center;
+    z-index: -1;
+}
+
+.section_breake_contact_text * {
+    color: white;
+}
+
+.section_breake_contact_text h1 {
+    display: inline-block;
+    width: 60%;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid red;
+}
+
+.section_breake_contact_text p {
+    font-style: italic;
+}
+
+.section_contact {
+    position: relative;
+    top: 25vh;
+    height: 100vh;
+    background-color: cornflowerblue;
+    z-index: -1;
 }
